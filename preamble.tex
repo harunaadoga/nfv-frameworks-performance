@@ -1,0 +1,64 @@
+\renewcommand*\ttdefault{txtt}
+\usepackage[inline]{enumitem}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage[dvipsnames,table]{xcolor}
+\usepackage{booktabs}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{todonotes}
+\usepackage{multirow}
+\usepackage{amssymb} % For the checkmark
+\usepackage{amssymb} % For the checkmark
+\usepackage{graphicx} % For the rotation
+\usepackage{array} % To enlarge the vertical space of the table's contents
+\usepackage{amssymb}% http://ctan.org/pkg/amssymb
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\usepackage{longtable}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\color{red!75}\ding{55}}%
+\usepackage{amsmath}
+\usepackage{cleveref} %package for section and subsection
+\crefformat{section}{\S#2#1#3} % see manual of cleveref, section 8.2.1
+\crefformat{subsection}{\S#2#1#3}
+\crefformat{subsubsection}{\S#2#1#3}
+
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+
+%%% comments -begin
+\usepackage{amsfonts,amsmath,amssymb,amstext,latexsym}
+\usepackage{ifthen}
+\newboolean{showcomments}
+\setboolean{showcomments}{true} %false true
+\ifthenelse{\boolean{showcomments}}
+{ \newcommand{\mynote}[3]{
+    \fbox{\bfseries\sffamily\scriptsize#1}
+    {\small$\blacktriangleright$\textsf{\emph{\color{#3}{#2}}}$\blacktriangleleft$}}}
+{ \newcommand{\mynote}[3]{}}
+\newcommand{\shrink}[1]{}
+\newcommand{\h}[1]{\mynote{Haruna}{#1}{Purple}}
+\newcommand{\dimitrios}[1]{\mynote{Dimitrios}{#1}{RoyalBlue}}
+\newcommand{\y}[1]{\mynote{Yehia}{#1}{blue}}
+%%% comments - end
+
+%%% table stuff
+\newcommand{\midsepremove}{\aboverulesep=0mm \belowrulesep=0mm}
+\midsepremove
+\newcommand{\midsepdefault}{\aboverulesep=0.02mm \belowrulesep=0.15mm}
+\midsepdefault
+\definecolor{rowcolor}{RGB}{204,221,245}
+\newcommand{\rc}{\rowcolor{rowcolor}}
+
+\usepackage{balance}
+
+\usepackage{thmtools}
+\declaretheorem[
+    name=Takeaway,
+    shaded={bgcolor=Peach!20,padding=2pt,rulecolor=Maroon,rulewidth=0.5pt},
+]{summary}
